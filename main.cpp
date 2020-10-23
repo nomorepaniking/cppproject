@@ -72,7 +72,7 @@ void Zhegalkin_solve (std::map<std::string, bool> values, std::vector<std::strin
         dividor_position = -1;
 
         //current coefficient calculation
-        std::string sum;
+        std::string *sum;
         for (auto l = variables.begin(); l != i; ++l) {
             if (*l == "0") {
                 current_koef_result = (current_koef_result + 1) % 2;
