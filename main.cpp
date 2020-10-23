@@ -135,10 +135,11 @@ int main() {
     Zhegalkin_prepare(variables);
     char buffer[16];
     char *function = new char [16];
-        std::cout << std::endl;
-        std::cin >> buffer;
+    std::cout << std::endl;
+    std::cin >> buffer;
+    if (!variables.empty())
         strcpy(function, buffer);
-        Zhegalkin_solve(values, variables, std::to_string(*function));
-        *function = ' ';
+    Zhegalkin_solve(values, variables, std::to_string(*function));
+    *function = ' ';
     return 0;
 }
