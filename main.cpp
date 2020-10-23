@@ -137,7 +137,7 @@ int main() {
     char *buffer = new char [40];
     std::cout << std::endl;
     std::cin >> *buffer;
-    strcpy(function, *buffer);
+    strcpy(function, buffer);
     Zhegalkin_solve(values, variables, function);
     *buffer = ' ';
     return 0;
