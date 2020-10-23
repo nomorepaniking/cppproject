@@ -133,12 +133,12 @@ int main() {
     std::map<std::string, bool> values;
     std::vector<std::string> variables;
     Zhegalkin_prepare(variables);
-    char buffer[40];
-    char *function = new char [16];
+    char function[16];
+    char *buffer = new char [40];
     std::cout << std::endl;
-    std::cin >> buffer;
-    strcpy(function, buffer);
-    Zhegalkin_solve(values, variables, std::to_string(*function));
-    *function = ' ';
+    std::cin >> *buffer;
+    strcpy(function, *buffer);
+    Zhegalkin_solve(values, variables, function);
+    *buffer = ' ';
     return 0;
 }
